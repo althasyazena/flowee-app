@@ -36,7 +36,7 @@ class LoginBrandHeader extends StatelessWidget {
         ),
         SizedBox(height: 6),
         Text(
-          'Rangkaian bunga segar, dikirimkan dengan cinta',
+          'Rangkaian bunga segar, dikirim dengan cinta',
           textAlign: TextAlign.center,
           style: TextStyle(
             color: Colors.white.withValues(alpha: 0.85),
