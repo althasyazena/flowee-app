@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class DecorativeGlow extends StatelessWidget {
-  const DecorativeGlow({super.key, required this.size});
+  const DecorativeGlow(this.size, {super.key}); // ganti jadi gini
 
   final double size;
 
