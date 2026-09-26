@@ -1,4 +1,5 @@
 import 'package:flowee_app/data/dummy_data.dart';
+import 'package:flowee_app/screen/login_screen.dart';
 import 'package:flowee_app/state/auth_controller.dart';
 import 'package:flowee_app/theme/app_theme.dart';
 import 'package:flowee_app/widgets/sheet_drag_handle.dart';
@@ -22,7 +23,7 @@ class _ProfileSheetContent extends StatelessWidget {
     await AuthController.instance.logout();
     if (!homeContext.mounted) { // apapun yang depannya ada ! artinya kebalikannya (not) dan mounted artinya "ready"
       Navigator.of(homeContext).pushAndRemoveUntil(
-        MaterialPageRoute(builder: (_) => Placeholder()), // arahkan navigasi ke loginscreen
+        MaterialPageRoute(builder: (_) => const LoginScreen()), // arahkan navigasi ke loginscreen (tambahan buat mute)
         /**
          * Predicate ini bilang: hapus SEMUA halaman sebelmunya dari riwayat navigasi/halaman
          * Predicate, satu properties atau parameter yang berfungsi menghapus semua parameter... intinya menghapus semua session
