@@ -13,6 +13,7 @@ class CategoryChipList extends StatelessWidget {
     return SizedBox(
       height: 36,
       child: ListView.separated( //bedanya akan menimbulkan action yang beda2 di setiap listnya. ga manggil secara hard code, tapi berdasarkan dummy data yang kita punya, bedanya ini dipisah listnya karna punya data yang berbeda (karna punya action yg beda beda)
+        scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
           final category = categories[index];
           final isSelected = category == selectedCategory;

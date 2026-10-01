@@ -57,13 +57,13 @@ class _FavoriteButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder<Set<String>>(
-      valueListenable: FavoritesController.intance,
+      valueListenable: FavoritesController.instance,
       builder: (context, favoritesId, _) {
         final isFavorite = favoritesId.contains(flowerId);
         return CircleIconButton(
           icon: isFavorite ? Icons.favorite_rounded : Icons.favorite_border_rounded,
           iconColor: isFavorite ? AppTheme.primary : Colors.black87,
-          onTap: () => FavoritesController.intance.toggle(flowerId),
+          onTap: () => FavoritesController.instance.toggle(flowerId),
         );
       },
     );

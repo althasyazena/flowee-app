@@ -21,7 +21,7 @@ class _ProfileSheetContent extends StatelessWidget {
   Future<void> _logout(BuildContext sheetContext) async {
     Navigator.of(sheetContext).pop();
     await AuthController.instance.logout();
-    if (!homeContext.mounted) { // apapun yang depannya ada ! artinya kebalikannya (not) dan mounted artinya "ready"
+    if (homeContext.mounted) { // apapun yang depannya ada ! artinya kebalikannya (not) dan mounted artinya "ready"
       Navigator.of(homeContext).pushAndRemoveUntil(
         MaterialPageRoute(builder: (_) => const LoginScreen()), // arahkan navigasi ke loginscreen (tambahan buat mute)
         /**

@@ -29,7 +29,7 @@ class HomeContentHeader extends StatelessWidget {
           SearchField(onChanged: onQueryChanged),
           SizedBox(height: 18),
           CategoryChipList(
-            categories: categories, 
+            categories: categories,
             selectedCategory: selectedCategory, 
             onSelected: onCategorySelected
           ),

@@ -25,7 +25,7 @@ class BottomNavItem extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(icon, size: 22, color: selected ? AppTheme.primary : Colors.transparent),
+            Icon(icon, size: 22, color: selected ? AppTheme.primary : Colors.grey),
             AnimatedSize( // menganimasikan perubahan ukuran childnya, disini digunakan supaya label muncul dengan animasi 'melebar'
               duration: Duration(milliseconds: 220),
               curve: Curves.easeOut,

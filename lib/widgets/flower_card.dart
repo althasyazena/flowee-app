@@ -58,12 +58,12 @@ class FlowerCard extends StatelessWidget {
                     top: 6,
                     right: 6,
                     child: ValueListenableBuilder<Set<String>>(
-                      valueListenable: FavoritesController.intance, // favoritesController.intance
+                      valueListenable: FavoritesController.instance, // favoritesController.intance
                       builder: (context, favorites, _) {
                         final isFav = favorites.contains(flower.id);
                         return InkWell(
                           borderRadius: BorderRadius.circular(20),
-                          onTap: () => FavoritesController.intance.toggle(flower.id), // favcontroller untuk mengontrol intance
+                          onTap: () => FavoritesController.instance.toggle(flower.id), // favcontroller untuk mengontrol intance
                           child: CircleAvatar(
                             radius: 16,
                             backgroundColor: Colors.white,

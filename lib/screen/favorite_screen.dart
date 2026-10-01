@@ -2,6 +2,7 @@ import 'package:flowee_app/data/dummy_data.dart';
 import 'package:flowee_app/screen/detail_screen.dart';
 import 'package:flowee_app/state/favorites_controller.dart';
 import 'package:flowee_app/theme/app_theme.dart';
+import 'package:flowee_app/widgets/empty_favorite_state.dart';
 import 'package:flowee_app/widgets/flower_card.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -24,14 +25,14 @@ class FavoriteScreen extends StatelessWidget {
           ),
           Expanded(
             child: ValueListenableBuilder<Set<String>>(
-              valueListenable: FavoritesController.intance,
+              valueListenable: FavoritesController.instance,
               builder: (context, favoriteIds, _) {
                 final favoriteFlowers = dummyFlowers
                 .where((flower) => favoriteIds.contains(flower.id))
                 .toList();
 
                 if (favoriteFlowers.isEmpty) {
-                  return const Placeholder();
+                  return const EmptyFavoriteState();
                 }
 
                 return GridView.builder(

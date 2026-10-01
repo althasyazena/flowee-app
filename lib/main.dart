@@ -1,3 +1,4 @@
+import 'package:flowee_app/screen/splash_screen.dart';
 import 'package:flowee_app/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class FloweeApp extends StatelessWidget {
       title: "Flowee App",
       debugShowCheckedModeBanner: false,
       theme: AppTheme.theme,
-      home: const Placeholder(),
+      home: SplashScreen(),
     );
   }
 }
